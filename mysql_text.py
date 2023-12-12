@@ -19,7 +19,8 @@ except mysql.connector.Error as err:
 cursor = connection.cursor()
 
 
-cursor.execute("""INSERT into users (name, email, phoneNumber, state, county, address, zip, password) values ("James B", "jamesb@purdue.edu", "3025889267", "PA", "Chester", "881 Brintons Bridge Road", "19382", "JamesPassword" )""")
+cursor.execute("""INSERT into users (name, email, phoneNumber, address, zip, password) values 
+        ("JamesB", "jamesb@purdue.edu", "3025889267", "881 Brintons Bridge Road", "19382", "JamesPassword" )""")
 connection.commit()
 
 connection.close()

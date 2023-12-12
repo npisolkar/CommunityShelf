@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+  <title> {{uname}} </title>
+  </head>
+<body>
+  <h1> {{uname}}'s items </h1>
+  {% for item in item_list%}
+    <p>{{item}}</p>
+  {% endfor %}
+  
+
+  <form action="/deleting" method="POST">
+    <h2>Delete Item</h2>
+    <label for="delete_this_item">Enter Item ID you would like to delete:</label> 
+    <input type="text" id="deleteid" name="deleteid" required><br>
+    <input type="submit" value="delete_sid">
+  </form>
+
+  
+  <form action="/additem" method="POST">
+    <h2>Add Item</h2>
+    <input type="submit" value="nothing">
+  </form>
+
+
+  <form action="/edititem" method="POST"> 
+    <h2>Edit Item</h2>                                                           
+    <label for="edit_this_item">Enter Item ID you would like to edit:</label> 
+    <input type="text" id="editid" name="editid" required><br>
+    <input type="submit" value="editid">
+  </form>
+
+  <form action="/logout" method="POST">
+    <h2>Logout</h2>
+    <input type="submit" value="logout">
+  </form>
+
+</body> 
+</html>
+
+
+
+

@@ -1,0 +1,31 @@
+<!doctype html>
+
+<html>
+<head>
+  <title>Add/Edit an item</title>
+</head>
+<body>
+  <h1>Fill out all fields then submit to post item"</h1>
+  <form action="/adding" method="POST">
+    <label for="itemname">Item name:</label>
+    <input type="text" id="nm" name="nm" value={{name if name}} required><br>
+    
+    <label for="category">Choose a category:</label>
+        <select id="category" name="category">
+            {% for cat in categories %}
+                <option value="{{ cat }}">{{ cat }}</option>
+            {% endfor %}
+        </select>
+        <br>
+    
+    <label for="price">Item price(nearest dollar):</label>
+    <input type="number" id="price" name="price" value={{price if price}}required><br>
+    <label for="description">Item description:</label>
+    <input type="text" id="description" name="description" value={{decription if description}} required><br>
+    
+    <input type="submit" value="Submit Item">
+  </form>
+</body>
+
+
+</html>
