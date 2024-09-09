@@ -1,5 +1,5 @@
 # CommunityShelf
-Web application; facilitates borrowing useful goods to people in your community
+Web application; prototype for catalogingthings that people own in  your community
 
 ### Stored procedures:
 CREATE PROCEDURE `GetUserIdByUsername`( IN input_username VARCHAR(255), OUT output_userId INT)
